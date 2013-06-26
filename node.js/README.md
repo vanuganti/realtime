@@ -17,12 +17,12 @@ Get Started:
 ------------
 
 - Clone the git repo and install dependency packages
-    <code>
+    ```bash
         git clone git@github.com:vanuganti/realtime.git
         cd realtime
         cd node.js
         npm install
-    </code>
+    ```
 - Start the redis server (default localhost on port 6379)
 - Start node with server.js
     <code>node server.js</code>
