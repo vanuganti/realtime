@@ -1,0 +1,22 @@
+{
+  "name" : "node.js",
+  "description" : "Realtime stats using node.js, socket.io and redis",
+  "version" : "0.0.1",
+  "author": {
+    "name": "Venu Anuganti",
+    "email": "venu@venublog.com"
+  },
+  "dependencies" : {
+    "redis": "",
+    "socket.io": "",
+    "express": ""
+  },
+  "repository" : {
+    "type": "git",
+    "url": "http://github.com/vanuganti/realtime"
+  },
+  "engines" : { 
+    "node": ">=0.4.0" 
+  }
+}
+
