@@ -16,10 +16,10 @@ Get Started:
 
 - Start redis server (default localhost on port 6379)
 - Start node with server.js
-        node server.js
+    <code>node server.js</code>
 - Open client.html in browser code
 - Publish a counter to 'realtime' channel in redis
-        redis-cli publish realtime 99
+    <code>redis-cli publish realtime 99</code>
 
 
 
