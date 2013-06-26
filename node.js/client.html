@@ -1,0 +1,51 @@
+<html>
+  <head>
+
+    <title>REAL TIME Node.js, Redis and Socket.IO</title>
+   
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+
+      var socket = io.connect('http://localhost:3000/');
+
+      socket.on('connect', function(data){
+        setStatus('connected');
+        socket.emit('subscribe', {channel:'realtime'});
+      });
+
+      socket.on('reconnecting', function(data){
+        setStatus('reconnecting');
+      });
+
+      socket.on('message', function (data) {
+        console.log('received a message: ', data);
+        addMessage(data);
+      });
+
+      function addMessage(data) {
+          $('#online').html(data);
+      }
+
+      function setStatus(msg) {
+          console.log('Connection Status : ' + msg);
+      }
+
+
+    </script>
+  </head>
+
+  <body>
+    <table>
+      <tr style="width:100%; height: 200px;"> 
+        <td align="center" style="width: 30%; height: 100%; border: 1px solid #000;" >
+            <p id="online" style="font-size: 100px;">0</p>
+        </td>
+     </tr>
+  </table>
+  </body>
+</html>
+
