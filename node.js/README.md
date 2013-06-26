@@ -16,10 +16,18 @@ Requirements:
 Get Started:
 ------------
 
-- Start redis server (default localhost on port 6379)
+- Clone the git repo and install dependency packages
+    <code>
+        git clone git@github.com:vanuganti/realtime.git
+        cd realtime
+        cd node.js
+        npm install
+    </code>
+- Start the redis server (default localhost on port 6379)
 - Start node with server.js
     <code>node server.js</code>
 - Open client.html in browser code
+    <code>open client.html</code>
 - Publish a counter to 'realtime' channel in redis
     <code>redis-cli publish realtime 99</code>
 - Notice the updated counter in browser
