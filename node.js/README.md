@@ -17,19 +17,25 @@ Get Started:
 ------------
 
 - Clone the git repo and install dependency packages
-    ```bash
-        git clone git@github.com:vanuganti/realtime.git
-        cd realtime
-        cd node.js
-        npm install
-    ```
+
+    $ git clone git@github.com:vanuganti/realtime.git
+    $ cd realtime
+    $ cd node.js
+    $ npm install
+
 - Start the redis server (default localhost on port 6379)
 - Start node with server.js
-    <code>node server.js</code>
+
+    $ node server.js
+
 - Open client.html in browser code
-    <code>open client.html</code>
+
+    $ open client.html
+
 - Publish a counter to 'realtime' channel in redis
-    <code>redis-cli publish realtime 99</code>
+
+    $ redis-cli publish realtime 99
+
 - Notice the updated counter in browser
 
 For additional details, check http://venublog.com/2013/06/26/realtime-web-stats-using-node-js-socket-io-and-redis/
